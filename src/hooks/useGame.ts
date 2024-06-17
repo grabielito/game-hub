@@ -21,7 +21,7 @@ export interface Game {
   }
 
 const useGame = () => {
-    const [games, setgames] = useState<Game[]>([]);
+  const [games, setgames] = useState<Game[]>([]);
     const [error, seterror] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
