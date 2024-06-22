@@ -19,7 +19,7 @@ export interface Game {
   
   
 
-const useGame = (genre:Genre|null,selectedPlatform:Platform|null) => useData<Game>('/games',{params:{genres:genre?.id, platforms:selectedPlatform?.id}},[genre?.id, selectedPlatform?.id])
+const useGame = (genre:Genre|null,selectedPlatform:Platform|null,sortOption:string) => useData<Game>('/games',{params:{genres:genre?.id, platforms:selectedPlatform?.id,ordering:sortOption }},[genre?.id, selectedPlatform?.id,sortOption])
 
 
 export default useGame;
