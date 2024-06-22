@@ -28,6 +28,7 @@ const PlatformSelector = ({
             onClick={() => {
               setSelectedPlatform(platform);
             }}
+            key={platform.id}
           >
             {platform.name}
           </MenuItem>
