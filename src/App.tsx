@@ -1,11 +1,4 @@
-import {
-  Button,
-  ButtonGroup,
-  Grid,
-  GridItem,
-  HStack,
-  Show,
-} from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
@@ -59,13 +52,13 @@ function App() {
             onSelectSortOption={(option) => {
               setGameQuery({ ...gamequery, sortOption: option });
             }}
-            sortOption={gamequery.sortOption.label}
+            sortOption={gamequery.sortOption?.label || "Relevance"}
           />
         </HStack>
         <GameGrid
           genre={gamequery.genre}
           selectedPlatform={gamequery.platform}
-          sortOption={gamequery.sortOption.value}
+          sortOption={gamequery.sortOption?.value}
         />
       </GridItem>
     </Grid>
