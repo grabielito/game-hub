@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
@@ -7,8 +7,9 @@ import { Genre } from "./hooks/useGenre";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/useGame";
 import SortSelector, { SortOptions } from "./components/SortSelector";
+import GameHeading from "./components/GameHeading";
 
-interface GameQuery {
+export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOption: SortOptions;
@@ -46,20 +47,25 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <HStack marginBottom={5}>
-          <PlatformSelector
-            onSelectedPlatform={(platform) => {
-              setGameQuery({ ...gamequery, platform });
-            }}
-            selectedPlatform={gamequery.platform}
-          />
-          <SortSelector
-            onSelectSortOption={(option) => {
-              setGameQuery({ ...gamequery, sortOption: option });
-            }}
-            sortOption={gamequery.sortOption?.label || "Relevance"}
-          />
-        </HStack>
+        <Box paddingLeft={2}>
+          <GameHeading gameQuery={gamequery} />
+          <Flex paddingLeft={2} marginBottom={5}>
+            <Box marginRight={5}>
+              <PlatformSelector
+                onSelectedPlatform={(platform) => {
+                  setGameQuery({ ...gamequery, platform });
+                }}
+                selectedPlatform={gamequery.platform}
+              />
+            </Box>
+            <SortSelector
+              onSelectSortOption={(option) => {
+                setGameQuery({ ...gamequery, sortOption: option });
+              }}
+              sortOption={gamequery.sortOption?.label || "Relevance"}
+            />
+          </Flex>
+        </Box>
         <GameGrid
           searchParam={gamequery.searchParam}
           genre={gamequery.genre}
