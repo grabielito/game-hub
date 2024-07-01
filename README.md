@@ -1,24 +1,35 @@
 # game-hub
 
-![Preview main screen](game_hub_main_screen.png){:width="200px"}
+[Visita la app](https://game-hub-green-iota.vercel.app/)
+
+![Preview main screen](game_hub_main_screen.png)
 
 This is a project that I built as part of the practice in the course React 18 for Beginners taught by Mosh Hamedani.
 
 ## Tecnologias utilizadas
 
-## Tabla de Contenidos
+<p align="center">
+  <img src="mdResources/free-react-1-282599.webp" alt="Imagen 1" width="200"/>
+  <img src="mdResources/images.png" alt="Imagen 2" width="200" height="180"/>
+  <img src="mdResources/Axios_SS.png" alt="Imagen 3" width="200" height="180"/>
+</p>
 
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+## API
+
+<img src="mdResources/-JTt60iX_400x400.jpg" alt="Rawg.io" width="100" height="100"/>
+
+https://rawg.io/
 
 ## Instalación
 
-Instrucciones paso a paso sobre cómo instalar tu proyecto. Por ejemplo:
-
 ```bash
-git clone https://github.com/usuario/proyecto.git
+git clone https://github.com/grabielito/game-hub.git
 cd proyecto
 npm install
+```
+
+## Ejecución de manera local
+
+```
+npm run dev
 ```
