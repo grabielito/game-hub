@@ -1,5 +1,3 @@
-import React from "react";
-import useData from "../hooks/useData";
 import useGenre, { Genre } from "../hooks/useGenre";
 import {
   Button,
