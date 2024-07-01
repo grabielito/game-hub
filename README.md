@@ -2,7 +2,7 @@
 
 [Visita la app](https://game-hub-green-iota.vercel.app/)
 
-![Preview main screen](game_hub_main_screen.png)
+![Preview main screen](mdResources/game_hub_main_screen.png)
 
 This is a project that I built as part of the practice in the course React 18 for Beginners taught by Mosh Hamedani.
 
